@@ -7,11 +7,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="mb-8 md:mb-0">
-            <h3 className="text-2xl font-bold mb-4">CleanCo</h3>
+            <h3 className="text-2xl font-bold mb-4">SanitaryPro</h3>
             <p className="text-gray-400 mb-4">
-              Revolutionizing sanitation for a healthier world. Professional cleaning services tailored to your needs.
+            Engineered for excellence, our sanitary ware is crafted with top-grade materials and advanced engineering techniques. Enjoy faucets that not only perform flawlessly but also add a touch of sophistication to every setting.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
                 <Facebook size={20} />
               </a>
@@ -24,7 +24,7 @@ const Footer = () => {
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
                 <Linkedin size={20} />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -97,35 +97,32 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center">
                 <Phone size={20} className="mr-2 text-blue-500" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">+1 (832) 962‑1214</span>
               </li>
               <li className="flex items-center">
                 <Mail size={20} className="mr-2 text-blue-500" />
                 <a
-                  href="mailto:info@cleanco.com"
+                  href="mailto:faucettpro@gmail.com"
                   className="text-gray-400 hover:text-white transition-colors duration-300"
                 >
-                  info@cleanco.com
+                  faucettpro@gmail.com              
                 </a>
               </li>
-              <li className="flex items-center">
-                <MapPin size={20} className="mr-2 text-blue-500" />
-                <span className="text-gray-400">123 Clean Street, Sparkle City, SC 12345</span>
-              </li>
+             
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2025 CleanCo. All rights reserved.</p>
+          <p className="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2025 SanitaryPro All rights reserved.</p>
           <div className="flex space-x-4">
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+            {/* <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
               Privacy Policy
             </a>
             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
               Terms of Service
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

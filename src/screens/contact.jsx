@@ -73,17 +73,17 @@ const Contact = () => {
               <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
               <p className="mb-8">Fill out the form or contact us directly using the information below.</p>
               <div className="space-y-4">
-                <div className="flex items-center">
+                {/* <div className="flex items-center">
                   <MapPin className="w-6 h-6 mr-4" />
                   <span>123 Clean Street, Sparkle City, SC 12345</span>
-                </div>
+                </div> */}
                 <div className="flex items-center">
                   <Phone className="w-6 h-6 mr-4" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+1 (832) 962‑1214</span>
                 </div>
                 <div className="flex items-center">
                   <Mail className="w-6 h-6 mr-4" />
-                  <span>info@cleanco.com</span>
+                  <span>faucettpro@gmail.com</span>
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-6 h-6 mr-4" />
@@ -175,7 +175,7 @@ const Contact = () => {
         </div>
 
         {/* Map Section */}
-        <div className="mt-12">
+        {/* <div className="mt-12">
           <h2 className="text-2xl font-semibold mb-4 text-center">Find Us</h2>
           <div className="aspect-w-16 aspect-h-9">
             <iframe
@@ -190,7 +190,7 @@ const Contact = () => {
               title="CleanCo Location"
             ></iframe>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )

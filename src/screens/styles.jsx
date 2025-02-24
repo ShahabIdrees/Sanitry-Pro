@@ -3,72 +3,144 @@ import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight, Search } from "lucide-react"
 
 
-const stylesData= [
+const stylesData = [
   {
     id: 1,
-    name: "Modern Minimalist",
-    description: "Clean lines and clutter-free spaces for a contemporary look.",
-    imageUrl: "/placeholder.svg?height=300&width=400",
+    name: "Modern Minimalist Faucet",
+    description: "Sleek design with clean lines, perfect for a contemporary kitchen or bath.",
+    imageUrl: "style-1.jpeg",
     category: "Residential",
   },
   {
     id: 2,
-    name: "Eco-Friendly Green",
-    description: "Sustainable cleaning methods using environmentally safe products.",
-    imageUrl: "/placeholder.svg?height=300&width=400",
+    name: "Eco-Friendly Faucet",
+    description: "Water-saving technology and sustainable materials for an eco-conscious home.",
+    imageUrl: "style-2.jpeg",
     category: "Eco-Friendly",
   },
   {
     id: 3,
-    name: "Deep Sanitization",
-    description: "Thorough disinfection process for maximum hygiene.",
-    imageUrl: "/placeholder.svg?height=300&width=400",
+    name: "Precision Flow Faucet",
+    description: "Engineered for optimal water flow and efficiency in commercial settings.",
+    imageUrl: "style-3.jpeg",
     category: "Commercial",
   },
   {
     id: 4,
-    name: "Luxury Detailing",
-    description: "Premium cleaning service with attention to the finest details.",
-    imageUrl: "/placeholder.svg?height=300&width=400",
+    name: "Luxury Elegance Faucet",
+    description: "Premium design with exquisite detailing, ideal for upscale residential projects.",
+    imageUrl: "style-4.jpeg",
     category: "Residential",
   },
   {
     id: 5,
-    name: "Quick Refresh",
-    description: "Rapid cleaning solution for immediate results.",
-    imageUrl: "/placeholder.svg?height=300&width=400",
+    name: "Quick-Flow Faucet",
+    description: "Instant water delivery with modern design for immediate functionality.",
+    imageUrl: "style-5.jpeg",
     category: "Commercial",
   },
   {
     id: 6,
-    name: "Seasonal Deep Clean",
-    description: "Comprehensive cleaning tailored for changing seasons.",
-    imageUrl: "/placeholder.svg?height=300&width=400",
+    name: "All-Season Faucet",
+    description: "Engineered for year-round performance, adapting to varying water pressures.",
+    imageUrl: "style-6.jpeg",
     category: "Residential",
   },
   {
     id: 7,
-    name: "Pet-Friendly Clean",
-    description: "Specialized cleaning considering pet hair and odors.",
-    imageUrl: "/placeholder.svg?height=300&width=400",
+    name: "SmartClean Faucet",
+    description: "Designed for easy use and maintenance, ensuring a hygienic solution.",
+    imageUrl: "style-7.jpeg",
     category: "Residential",
   },
   {
     id: 8,
-    name: "Office Sanitization",
-    description: "Professional cleaning designed for workplace environments.",
-    imageUrl: "/placeholder.svg?height=300&width=400",
+    name: "Office Series Faucet",
+    description: "Sleek and functional design tailored for high-traffic office environments.",
+    imageUrl: "style-8.jpeg",
     category: "Commercial",
   },
   {
     id: 9,
-    name: "Post-Construction Cleanup",
-    description: "Thorough cleaning after renovation or construction work.",
-    imageUrl: "/placeholder.svg?height=300&width=400",
+    name: "Renovation Ready Faucet",
+    description: "Engineered for seamless integration in post-construction and remodeling projects.",
+    imageUrl: "style-9.jpeg",
     category: "Specialized",
   },
-  // Add more styles as needed
-]
+  {
+    id: 10,
+    name: "Budget Series Faucet",
+    description: "Affordable and reliable—perfect for budget-conscious projects.",
+    imageUrl: "style-10.jpeg",
+    category: "Residential",
+  },
+  {
+    id: 11,
+    name: "Industrial Strength Faucet",
+    description: "Built for heavy-duty performance in demanding industrial environments.",
+    imageUrl: "style-11.jpeg",
+    category: "Commercial",
+  },
+  {
+    id: 12,
+    name: "Designer Collection Faucet",
+    description: "Sophisticated design that enhances both residential and boutique commercial spaces.",
+    imageUrl: "style-12.jpeg",
+    category: "Residential",
+  },
+  {
+    id: 13,
+    name: "Smart Sensor Faucet",
+    description: "Touchless operation with advanced sensor technology for improved hygiene.",
+    imageUrl: "style-13.jpeg",
+    category: "Commercial",
+  },
+  {
+    id: 14,
+    name: "Vintage Charm Faucet",
+    description: "Classic design meets modern functionality for timeless appeal.",
+    imageUrl: "style-14.jpeg",
+    category: "Residential",
+  },
+  {
+    id: 15,
+    name: "Compact Space Faucet",
+    description: "Optimized for small spaces without compromising on performance.",
+    imageUrl: "style-15.jpeg",
+    category: "Residential",
+  },
+  {
+    id: 16,
+    name: "Dual-Function Faucet",
+    description: "Versatile design featuring dual water streams for varied usage.",
+    imageUrl: "style-16.jpeg",
+    category: "Commercial",
+  },
+  {
+    id: 17,
+    name: "High-Pressure Faucet",
+    description: "Engineered to perform under high water pressure conditions.",
+    imageUrl: "style-17.jpeg",
+    category: "Commercial",
+  },
+  {
+    id: 18,
+    name: "Customizable Touch Faucet",
+    description: "Fully customizable features to match your unique brand requirements.",
+    imageUrl: "style-18.jpeg",
+    category: "Specialized",
+  },
+  {
+    id: 19,
+    name: "SmartFlow Faucet",
+    description: "Next-generation faucet with intelligent flow control for enhanced efficiency.",
+    imageUrl: "style-19.jpeg",
+    category: "Commercial",
+  },
+  // Add more products as needed
+];
+
+
 
 const Styles= () => {
   const [currentPage, setCurrentPage] = useState(1)
@@ -171,7 +243,7 @@ const Styles= () => {
               key={style.id}
               className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105"
             >
-              <img src={style.imageUrl || "/placeholder.svg"} alt={style.name} className="w-full h-48 object-cover" />
+              <img src={style.imageUrl || "/placeholder.svg"} alt={style.name} className="w-full h-48 object-contain" />
               <div className="p-6">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-semibold text-gray-900">{style.name}</h3>
