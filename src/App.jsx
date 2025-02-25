@@ -6,6 +6,7 @@ import Styles from "./screens/styles";
 import About from "./screens/about";
 import Contact from "./screens/contact";
 import Layout from "./layout.jsx";
+import ScrollToTop from "./scroll-to-top.js";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />

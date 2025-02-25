@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"; // Use React Router
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -19,6 +19,7 @@ const Navbar = () => {
             </Link>
           </div>
 
+          {/* Desktop Menu */}
           <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/styles">Styles</NavLink>
@@ -26,29 +27,27 @@ const Navbar = () => {
             <NavLink to="/contact">Contact</NavLink>
           </div>
 
+          {/* Mobile Menu Button */}
           <div className="sm:hidden flex items-center">
             <button
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
             >
               <span className="sr-only">Open main menu</span>
-              {isOpen ? (
-                <X className="block h-6 w-6" />
-              ) : (
-                <Menu className="block h-6 w-6" />
-              )}
+              {isOpen ? <X className="block h-6 w-6" /> : <Menu className="block h-6 w-6" />}
             </button>
           </div>
         </div>
       </div>
 
+      {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className="sm:hidden">
           <div className="pt-2 pb-3 space-y-1">
-            <MobileNavLink to="/">Home</MobileNavLink>
-            <MobileNavLink to="/styles">Styles</MobileNavLink>
-            <MobileNavLink to="/about">About</MobileNavLink>
-            <MobileNavLink to="/contact">Contact</MobileNavLink>
+            <MobileNavLink to="/" setIsOpen={setIsOpen}>Home</MobileNavLink>
+            <MobileNavLink to="/styles" setIsOpen={setIsOpen}>Styles</MobileNavLink>
+            <MobileNavLink to="/about" setIsOpen={setIsOpen}>About</MobileNavLink>
+            <MobileNavLink to="/contact" setIsOpen={setIsOpen}>Contact</MobileNavLink>
           </div>
         </div>
       )}
@@ -65,10 +64,11 @@ const NavLink = ({ to, children }) => (
   </Link>
 );
 
-const MobileNavLink = ({ to, children }) => (
+const MobileNavLink = ({ to, children, setIsOpen }) => (
   <Link
     to={to}
     className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 transition duration-150 ease-in-out"
+    onClick={() => setIsOpen(false)} // Close menu when a link is clicked
   >
     {children}
   </Link>

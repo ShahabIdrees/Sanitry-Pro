@@ -30,20 +30,20 @@ const Home = () => {
           alt="Clean bathroom"
           className="absolute inset-0 w-full h-full object-cover brightness-50"
         />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-down">Welcome to SanitaryPro</h1>
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center p-8">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-down ">Welcome to SanitaryPro</h1>
           <p className="text-xl md:text-2xl mb-8 animate-fade-in-up">
             Quality You Trust. Prices You Love. Your Brand, Your Way.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full flex items-center transition-all duration-300 ease-in-out transform hover:scale-105 animate-pulse">
+          <a href="/about" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full flex items-center transition-all duration-300 ease-in-out transform hover:scale-105 animate-pulse">
             Learn More
             <ArrowRight className="ml-2" size={20} />
-          </button>
+          </a>
         </div>
       </section>
 
       {/* Zigzag Sections */}
-      <section className="py-16 px-4 md:px-0 bg-gray-50">
+      <section className="py-16 px-4 md:px-0 bg-gray-50 px-8">
         <div className="container mx-auto">
           {/* First Zigzag Section */}
           <div className="flex flex-col md:flex-row items-center mb-16 animate-on-scroll">
@@ -129,9 +129,9 @@ const Home = () => {
           <p className="text-xl text-gray-600 mb-8 animate-on-scroll">
             Contact us today for a free consultation and quote!
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 animate-on-scroll">
+          <a href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 animate-on-scroll">
             Get Your Free Quote
-          </button>
+          </a>
         </div>
       </section>
     </main>

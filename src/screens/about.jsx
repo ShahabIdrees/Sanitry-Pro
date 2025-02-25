@@ -1,5 +1,6 @@
 import  React from "react"
 import { Users, Award, Recycle, Clock } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const About= () => {
   return (
@@ -53,40 +54,37 @@ const About= () => {
 
       {/* Company History */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">Our Journey</h2>
-          <div className="max-w-3xl mx-auto">
-            <div className="mb-8">
-              <h3 className="text-2xl font-semibold mb-2">2010: The Beginning</h3>
-              <p className="text-gray-700">
-                CleanCo was founded with a vision to transform the cleaning industry through innovation and dedication
-                to customer satisfaction.
-              </p>
-            </div>
-            <div className="mb-8">
-              <h3 className="text-2xl font-semibold mb-2">2015: Eco-Innovation</h3>
-              <p className="text-gray-700">
-                We introduced our line of eco-friendly cleaning products, setting a new standard for sustainable
-                cleaning practices.
-              </p>
-            </div>
-            <div className="mb-8">
-              <h3 className="text-2xl font-semibold mb-2">2020: Expansion</h3>
-              <p className="text-gray-700">
-                CleanCo expanded its services nationwide, bringing our exceptional cleaning solutions to more homes and
-                businesses.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold mb-2">Today</h3>
-              <p className="text-gray-700">
-                We continue to grow and innovate, always striving to provide the best cleaning services and products to
-                our valued customers.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl font-bold text-center mb-8">Our Value Proposition</h2>
+    <div className="max-w-3xl mx-auto">
+      <div className="mb-8">
+        <h3 className="text-2xl font-semibold mb-2">Direct Factory Sourcing</h3>
+        <p className="text-gray-700">
+          We cut out the middlemen by sourcing custom faucets straight from the factory, ensuring top quality at competitive prices.
+        </p>
+      </div>
+      <div className="mb-8">
+        <h3 className="text-2xl font-semibold mb-2">Customizable Solutions</h3>
+        <p className="text-gray-700">
+          Our products are fully customizable and white-label ready, letting you embed your brand identity on every faucet.
+        </p>
+      </div>
+      <div className="mb-8">
+        <h3 className="text-2xl font-semibold mb-2">Competitive Pricing</h3>
+        <p className="text-gray-700">
+          By eliminating extra distribution layers, we offer you premium faucets at prices that enhance your bottom line.
+        </p>
+      </div>
+      <div>
+        <h3 className="text-2xl font-semibold mb-2">Uncompromised Quality</h3>
+        <p className="text-gray-700">
+          Our commitment to excellence ensures each faucet delivers consistent performance and reliability for your customers.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Team Section */}
       <section className="py-16 bg-gray-100">
@@ -115,9 +113,12 @@ const About= () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Experience the SanitryPro Difference?</h2>
           <p className="text-xl mb-8">Join the many businesses that trust us for quality and reliability.</p>
+          <Link to="/contact">
+
           <button className="bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300">
             Get a Free Quote
           </button>
+          </Link>
         </div>
       </section>
     </div>
