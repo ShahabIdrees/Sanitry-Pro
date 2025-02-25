@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { ArrowRight, CheckCircle, Star, PhoneCall } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const Home = () => {
   useEffect(() => {
@@ -35,10 +36,10 @@ const Home = () => {
           <p className="text-xl md:text-2xl mb-8 animate-fade-in-up">
             Quality You Trust. Prices You Love. Your Brand, Your Way.
           </p>
-          <a href="/about" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full flex items-center transition-all duration-300 ease-in-out transform hover:scale-105 animate-pulse">
+          <Link to="/about" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full flex items-center transition-all duration-300 ease-in-out transform hover:scale-105 animate-pulse">
             Learn More
             <ArrowRight className="ml-2" size={20} />
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -129,9 +130,9 @@ const Home = () => {
           <p className="text-xl text-gray-600 mb-8 animate-on-scroll">
             Contact us today for a free consultation and quote!
           </p>
-          <a href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 animate-on-scroll">
+          <Link to="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 animate-on-scroll">
             Get Your Free Quote
-          </a>
+          </Link>
         </div>
       </section>
     </main>
